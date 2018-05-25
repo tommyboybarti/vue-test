@@ -1,24 +1,32 @@
 <template>
   <div id="app">
-    <img src="./assets/spunten.jpeg">
-    <app-hello/>
-    <app-content></app-content>
+    <app-header></app-header>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
-import Component1 from './components/Component1.vue';
+import showHour from './components/showHour.vue';
+import addHour from './components/addHour.vue';
+import listVenues from './components/listVenues.vue';
+import header from './components/header.vue';
 
 export default {
   components: {
-    'app-hello': HelloWorld,
-    'app-content': Component1
+    'addHour': addHour,
+    'showHour': showHour,
+    'listVenues': listVenues,
+    'app-header': header
   }
+
 }
 
 </script>
 
 <style>
+body {
+  margin: 0;
+  font-family: 'Architects Daughter';
+  }
 
-</style>
+</style>  
